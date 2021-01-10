@@ -1,24 +1,258 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: #1f3044;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+#covidWarning {
+  background-color: #1f3044;
   color: white;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 1rem;
 }
 
-.App-intro {
-  font-size: large;
+.menuItem {
+  padding: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#covidWarning a {
+  color: inherit;
+  text-decoration: none;
+}
+#covidWarning i {
+  color: red;
+}
+
+#covidWarning a:visited {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* main {
+  background-image: linear-gradient(
+      180deg,
+      rgba(31, 48, 68, 0.5),
+      rgba(31, 48, 68, 0.22)
+    ),
+    url("./images/background1.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+} */
+
+nav {
+  height: 65px;
+  width: 100%;
+  box-shadow: 0 1px rgb(31, 48, 68, 0.1);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #646c79;
+}
+
+.menuContainer {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  padding: 0rem 1rem;
+  font-family: "Raleway", sans-serif;
+  color: black;
+}
+
+.menuContainer a {
+  padding: 0.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  padding: 0rem 1rem;
+}
+
+.contentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  padding: 0rem 1rem;
+}
+
+#formContainer {
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+
+.form {
+  background-color: rgb(31, 48, 68, 0.7);
+}
+
+.mainContent {
+  color: white;
+  padding: 1rem;
+  height: 40vh;
+  text-align: center;
+  display: grid;
+  align-items: center;
+}
+
+#cta {
+  font-family: "Raleway", sans-serif;
+  text-decoration: wavy;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+#ctaBtn {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  background-color: rgb(31, 48, 68, 0.5);
+  color: white;
+  border: 1px solid rgb(88, 88, 88);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+h2 {
+  color: rgb(126, 56, 56);
+  font-weight: 400;
+}
+
+#aboutUs {
+  padding: 2rem 0rem;
+  border-bottom: 1px dotted #646c79;
+}
+
+#reviews {
+  padding: 2rem 0rem;
+}
+
+.customerForm {
+  align-items: center;
+  /* max-width: 1000px; */
+  max-width: 80%;
+  margin: 0 auto;
+  display: grid;
+  padding: 2rem;
+  grid-gap: 1.5rem;
+}
+
+input,
+select {
+  height: 40px;
+  background-color: rgb(31, 48, 68, 0.1);
+  border: lightgray solid 1px;
+  border-radius: 5px;
+  width: 100%;
+  color: black;
+  /* padding-left: 7px; */
+  margin-top: 5px;
+  color: #1f3044;
+}
+
+.submitBtn {
+  height: 40px;
+  background-color: rgb(31, 48, 68, 0.1);
+  border: lightgray solid 1px;
+  border-radius: 5px;
+  margin-top: 1.3rem;
+}
+
+.submitBtn:hover {
+  border: 1px solid grey;
+  background-color: rgb(31, 48, 68, 0);
+  cursor: pointer;
+}
+
+/*----MEDIA QUERY-----*/
+
+/* @media screen and (orientation: landscape) and (min-device-width: 500px) and (max-device-width: 1000px) {
+  main {
+    height: 100vh;
+  }
+} */
+
+@media (min-width: 500px) {
+  main {
+    height: 100vh;
+  }
+}
+
+/*-----MEDIA QUERY-------*/
+
+@media (min-width: 1000px) {
+  .contentContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .customerForm {
+    width: 450px;
+  }
+
+  .customerForm {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .test {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  */ main {
+    height: 65vh;
+  }
+
+  .mainContent {
+    height: 65vh;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  #cta {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .menuItem {
+    padding: 1rem;
+  }
+
+  .menuContainer {
+    text-align: right;
+  }
+
+  #ctaBtn {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  #reviews {
+    background-color: rgb(248, 248, 248);
+    padding: 2rem 0rem 2rem 1rem;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  #aboutUs {
+    padding: 2rem 1rem 2rem 0rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-bottom: none;
+  }
+
+  .customerForm {
+    grid-gap: 2rem;
+    width: 65%;
+  }
 }
