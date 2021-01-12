@@ -171,25 +171,31 @@ class ProviderForm extends Component{
                 </select>
               </div>
 
-              <div className="test" id="zipDiv">
-                <label htmlFor="insured">Are you insured?</label>
-                <input typeof="checkbox"
+
+              <div className="test" id="whoDiv">
+                  <label htmlFor="insured">Are you insured</label>
+                <select
                   name="insured"
                   value={this.state.insured}
                   onChange={this.handleChange}
-                  id="insured"
-                />
+                  id="insured">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
               </div>
 
-              <div className="test" id="zipDiv">
-                <label htmlFor="backgroundCheck">Will you agree to background check?</label>
-                <input typeof="checkbox"
+              <div className="test" id="whoDiv">
+                  <label htmlFor="backgroundCheck">Will you agree to a background check?</label>
+                <select
                   name="backgroundCheck"
                   value={this.state.backgroundCheck}
                   onChange={this.handleChange}
-                  id="backgroundCheck"
-                />
+                  id="backgroundCheck">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
               </div>
+
 
               <div className="test" id="submitDiv">
                   <button className="submitBtn" type="submit">Submit</button>

@@ -9,8 +9,8 @@ const providerSchema = new Schema({
     phone: { type: String, required: true },
     zip: { type: String, required: true },
     radius: { type: String, required: true },
-    insured: { type: Boolean, required: true },
-    backgroundCheck: { type: Boolean, required: true },
+    insured: { type: String },
+    backgroundCheck: { type: String },
     date: { type: Date, default: Date.now  }
 });
 

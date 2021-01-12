@@ -149,6 +149,11 @@ h2 {
   grid-gap: 1.5rem;
 }
 
+.topChoiceReq {
+  font-size: small;
+  color: rgb(126, 56, 56);
+}
+
 input,
 select {
   height: 40px;
