@@ -1,3 +1,5 @@
 module.exports = {
-    Customer: require("./customer")
+    Customer: require("./customer"),
+    Provider: require("./provider"),
+    Review: require("./review")
 };
