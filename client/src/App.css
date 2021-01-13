@@ -17,14 +17,6 @@ h1 {
   width: 30%;
 }
 
-#reviews {
-  background-color: rgb(248, 248, 248);
-  padding: 2rem 0rem 2rem 1rem;
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
 /*===========*/
 
 #covidWarning {
@@ -292,6 +284,15 @@ textarea {
     grid-column-start: 1;
     grid-column-end: 3;
     border-bottom: none;
+  }
+
+  #reviews {
+    background-color: rgb(248, 248, 248);
+    padding: 2rem 0rem 2rem 1rem;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 
   .customerForm,
