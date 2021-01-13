@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const reviewSchema = new Schema({
     name: { type: String, required: true },
     review: { type: String, required: true },
+    rating: { type: String, required: true },
     date: { type: Date, default: Date.now  }
 });
 

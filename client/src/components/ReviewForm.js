@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 
 class ReviewForm extends Component{
@@ -39,6 +40,7 @@ class ReviewForm extends Component{
             .then(() => {
                 console.log('Data sent successfully');
                 this.resetReviewInputs();
+                this.props.history.push('/reviews');
             })
             .catch(() => {
                 console.log('error');
@@ -117,4 +119,4 @@ class ReviewForm extends Component{
     
 }
 
-export default ReviewForm;
+export default withRouter(ReviewForm);

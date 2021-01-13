@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 
 class ProviderForm extends Component{
@@ -51,6 +52,7 @@ class ProviderForm extends Component{
             .then(() => {
                 console.log('Data sent successfully');
                 this.resetProviderInputs();
+                this.props.history.push('/login');
             })
             .catch(() => {
                 console.log('error');
@@ -160,7 +162,7 @@ class ProviderForm extends Component{
                   <label htmlFor="radius">Select the distance from your zip code that you provide services</label>
                 <select
                   name="radius"
-                  value={this.state.radius}
+                  value={this.state.radius.selectValue}
                   onChange={this.handleChange}
                   id="radius">
                     <option value="10">10 Miles</option>
@@ -168,31 +170,6 @@ class ProviderForm extends Component{
                     <option value="30">30 Miles</option>
                     <option value="40">40 Miles</option>
                     <option value="50">50 Miles</option>
-                </select>
-              </div>
-
-
-              <div className="test" id="whoDiv">
-                  <label htmlFor="insured">Are you insured</label>
-                <select
-                  name="insured"
-                  value={this.state.insured}
-                  onChange={this.handleChange}
-                  id="insured">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-              </div>
-
-              <div className="test" id="whoDiv">
-                  <label htmlFor="backgroundCheck">Will you agree to a background check?</label>
-                <select
-                  name="backgroundCheck"
-                  value={this.state.backgroundCheck}
-                  onChange={this.handleChange}
-                  id="backgroundCheck">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
                 </select>
               </div>
 
@@ -208,4 +185,4 @@ class ProviderForm extends Component{
     
 }
 
-export default ProviderForm;
+export default withRouter(ProviderForm);

@@ -6,8 +6,8 @@ const customerSchema = new Schema({
     email: { type: String, required: true },
     phone: { type: String, required: true },
     zip: { type: String, required: true },
-    whoNeeds: { type: String, required: true },
-    howSoon: { type: String, required: true },
+    whoNeeds: { type: String },
+    howSoon: { type: String, default: "Not Sure" },
     date: { type: Date, default: Date.now  }
 });
 

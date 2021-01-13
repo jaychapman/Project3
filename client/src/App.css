@@ -4,6 +4,29 @@ body {
   color: #1f3044;
 }
 
+/*---h1 align center---*/
+h1 {
+  text-align: center;
+}
+
+#loginPage {
+  text-align: center;
+}
+
+#loginPage hr {
+  width: 30%;
+}
+
+#reviews {
+  background-color: rgb(248, 248, 248);
+  padding: 2rem 0rem 2rem 1rem;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+/*===========*/
+
 #covidWarning {
   background-color: #1f3044;
   color: white;

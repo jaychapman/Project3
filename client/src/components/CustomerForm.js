@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 
 class CustomerForm extends Component{
-    // constructor(){
-    //     super();
-
-
-    // }    
 
 
         state = {
@@ -49,7 +45,10 @@ class CustomerForm extends Component{
             })
             .then(() => {
                 console.log('Data sent successfully');
+                let zip = this.state.zip;
+                console.log(zip);
                 this.resetCustomerInputs();
+                this.props.history.push('/results');
             })
             .catch(() => {
                 console.log('error');
@@ -72,6 +71,8 @@ class CustomerForm extends Component{
         render(){
 
             console.log('state', this.state);
+            console.log(this.props);
+           
             return(
                 
             <form onSubmit={this.submit} className="customerForm">
@@ -150,6 +151,7 @@ class CustomerForm extends Component{
                   value={this.state.howSoon}
                   onChange={this.handleChange}
                   id="when">
+                    <option value="Not Sure">Not Sure</option>
                     <option value="Now">Now</option>
                     <option value="2weeks">2 Weeks</option>
                     <option value="1-3months">1-3 Months</option>
@@ -169,4 +171,4 @@ class CustomerForm extends Component{
     
 }
 
-export default CustomerForm;
+export default withRouter(CustomerForm);

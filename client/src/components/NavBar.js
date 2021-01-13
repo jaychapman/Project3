@@ -7,10 +7,13 @@ class NavBar extends Component {
             <nav>
             <div className="menuContainer">
                 <div className="menuGroup">
+                    <Link to="/">
+                        <>Home</>
+                    </Link>
                     <Link to="/customer">
                         <>Find Home Care</>
                     </Link>
-                    <Link to="/provider">
+                    <Link to="/join">
                         <>Join our Network</>
                     </Link>
                     <Link to="review">
