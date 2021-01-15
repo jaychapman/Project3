@@ -30,11 +30,11 @@ class Results extends Component {
 
         return providers.map((provider, index) => {
 
-            // can turn the providers into cards - improve styling and add star rating
+            // TODO - turn the providers into cards - improve styling and add star rating
             return <div key={index}>
                     <h3>{provider.companyName}</h3>
-                    <h5>{provider.phone} out of 5 stars</h5>
-                    <h5>{provider.email} out of 5 stars</h5>
+                    <h5>{provider.phone}</h5>
+                    <h5>{provider.email}</h5>
                     
                     <hr/>
                 </div>
