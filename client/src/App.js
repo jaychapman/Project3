@@ -13,12 +13,14 @@ import Provider from './pages/Provider';
 import Admin from './pages/Admin';
 import CustomerForm from './components/CustomerForm';
 import ReviewResults from './components/ReviewResults';
+import Chat from './components/Chat';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
       <div className="App">
+          <Chat />
           <CovidInfo />
           <NavBar />
           <Switch>

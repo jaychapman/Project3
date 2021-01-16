@@ -18,7 +18,7 @@ class Landing extends Component{
                 </div>
             </main>
 
-<section class="contentContainer">
+<section className="contentContainer">
 <div id="aboutUs">
   <h2>About Us</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis provident beatae fugit itaque quos. Facere vel sit ut delectus soluta voluptatem voluptatibus, id voluptatum sapiente neque mollitia odio fugiat impedit totam deserunt repudiandae illum modi error necessitatibus eligendi distinctio. Nostrum!</p>
