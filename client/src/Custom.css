@@ -1,0 +1,117 @@
+/* Custom CSS styles */
+
+/* Color Pallate
+
+main - cadetblue;
+green - #87a96b;
+orange - #c95a49;
+darkblue - #003366;
+yellow - #edd430;
+red - #b22222; 
+*/
+
+body {
+  text-align: center;
+}
+
+.handHeartIcon,
+.chartLineIcon {
+  font-size: 70px;
+  color: cadetblue;
+}
+
+.landing {
+  height: 35vh;
+  background-color: cadetblue;
+  margin-bottom: 0;
+}
+
+#homeContainer {
+  margin-top: 2rem;
+}
+
+#home,
+#about,
+#contact {
+  border-right: 1px solid white;
+}
+#menuContainer {
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: 100;
+}
+
+#logo {
+  position: relative;
+  margin-top: -9rem;
+}
+
+#tagline {
+  display: none;
+}
+
+#ctaBtn {
+  size: 3rem;
+  background-color: #87a96b;
+  color: white;
+  border: 1px solid white;
+}
+
+#ctaBtn:hover {
+  background-color: white;
+  color: cadetblue;
+  border: 1px solid white;
+}
+
+#home p {
+  text-align: justify;
+}
+
+h5 {
+  color: #c95a49;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+  cursor: pointer;
+}
+
+#about {
+  align-items: center;
+}
+
+.rcw-launcher {
+  background-color: cadetblue;
+}
+
+/* MEDIA QUERIES FOR LARGE SCREENS */
+@media screen and (min-width: 750px) {
+  .landing {
+    height: 35vh;
+    background-color: cadetblue;
+    margin-bottom: 0;
+    background-image: url("./components/images/backgroundpic2-1.png");
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #tagline {
+    display: block;
+  }
+}
+
+/* @media screen and (max-width: 550px) {
+    .rwc-widget-container {
+      height: 80vh;
+      position: fixed bottom;
+    }
+  } */

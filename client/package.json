@@ -5,6 +5,12 @@
   "private": true,
   "proxy": "http://localhost:4001/",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@okta/okta-auth-js": "^4.6.1",
+    "@okta/okta-react": "^4.1.0",
+    "@okta/okta-signin-widget": "^5.2.2",
     "axios": "^0.21.1",
     "react": "^16.13.1",
     "react-chat-widget": "^3.0.5",

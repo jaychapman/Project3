@@ -16,8 +16,11 @@ class NavBar extends Component {
                     <Link to="/join">
                         <>Join our Network</>
                     </Link>
-                    <Link to="review">
+                    <Link to="/review">
                         <>Reviews</>
+                    </Link>
+                    <Link to="/login">
+                        <>Login</>
                     </Link>
                 </div>
             </div>
