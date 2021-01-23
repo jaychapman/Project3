@@ -32,8 +32,8 @@ class ReviewResults extends Component {
 
             // can turn the reviews into cards - improve styling and add star rating
             return <div key={index}>
-                    <h3>{review.name}</h3>
-                    <h5>{review.rating} out of 5 stars</h5>
+                    <h5>{review.name}</h5>
+                    <h6>{review.rating} out of 5 stars</h6>
                     <p>{review.review}</p>
                     <hr/>
                 </div>
@@ -44,7 +44,6 @@ class ReviewResults extends Component {
     render(){
         return(
             <>
-            <h1>ReviewResults</h1>
             <div className="container">
                 {this.displayReviews(this.state.reviews)}
             </div>

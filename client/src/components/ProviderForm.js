@@ -41,7 +41,7 @@ class ProviderForm extends Component{
                 zip: this.state.zip,
                 radius: this.state.radius,
                 insured: this.state.insured,
-                backgroundCheck: this.state.backgroundCheck
+                backgroundCheck: "pending"
             };
 
             axios({
@@ -52,7 +52,7 @@ class ProviderForm extends Component{
             .then(() => {
                 console.log('Data sent successfully');
                 this.resetProviderInputs();
-                this.props.history.push('/login');
+                this.props.history.push('/success');
             })
             .catch(() => {
                 console.log('error');
@@ -79,16 +79,20 @@ class ProviderForm extends Component{
 
             console.log('state', this.state);
             return(
-                
-            <form onSubmit={this.submit} className="providerForm">
-
-              <div className="test">
-                 <h2>Fill Out This Form to Become a Provider</h2>
+              <>
+              <div className="providerForm">
+              <div id="providerHeading" className="u-full-width test">
+                <h5>Become a Provider</h5>
+                <p>We require our providers to submit to background check, provide proof of insurance and demonstrate adherence to COVID-19 precautions for home care workers. If you would like to be added to our database of providers please fill out the form</p>
               </div>
-    
+
+                
+          <form onSubmit={this.submit}>
+            
               <div className="test" id="nameDiv">
                 <label htmlFor="companyName">Company Name</label>
                 <input
+                  className="u-full-width"
                   name="companyName"
                   value={this.state.companyName}
                   onChange={this.handleChange}
@@ -97,10 +101,11 @@ class ProviderForm extends Component{
                   type="text" 
                 />
               </div>
-
+              
               <div className="test" id="nameDiv">
                 <label htmlFor="firstName">First Name</label>
                 <input
+                  className="u-full-width"
                   name="firstName"
                   value={this.state.firstName}
                   onChange={this.handleChange}
@@ -109,10 +114,11 @@ class ProviderForm extends Component{
                   type="text" 
                 />
               </div>
-
+            
               <div className="test" id="nameDiv">
                 <label htmlFor="lastName">Last Name</label>
                 <input
+                  className="u-full-width"
                   name="lastName"
                   value={this.state.lastName}
                   onChange={this.handleChange}
@@ -121,10 +127,11 @@ class ProviderForm extends Component{
                   type="text" 
                 />
               </div>
-
+              
               <div className="test" id="emailDiv">
                 <label htmlFor="email">Email</label>
                 <input
+                  className="u-full-width"
                   name="email"
                   value={this.state.email}
                   onChange={this.handleChange}
@@ -133,22 +140,26 @@ class ProviderForm extends Component{
                   type="text"
                 />
               </div>
+            
 
               <div className="test" id="phoneDiv">
                 <label htmlFor="phone">Phone</label>
                 <input
+                  className="u-full-width"
                   name="phone"
                   value={this.state.phone}
                   onChange={this.handleChange}
-                  placeholder="Phone"
+                  placeholder="format: 123-456-7890"
                   id="phone"
-                  type="text"
+                  type="tel"
+                  pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
                 />
               </div>
 
               <div className="test" id="zipDiv">
                 <label htmlFor="zip">Zip Code</label>
                 <input
+                  className="u-full-width"
                   name="zip"
                   value={this.state.zip}
                   onChange={this.handleChange}
@@ -157,7 +168,7 @@ class ProviderForm extends Component{
                   type="text"
                 />
               </div>
-
+              
               <div className="test" id="whoDiv">
                   <label htmlFor="radius">Select the distance from your zip code that you provide services</label>
                 <select
@@ -178,8 +189,9 @@ class ProviderForm extends Component{
                   <button className="submitBtn" type="submit">Submit</button>
               </div>
 
-            </form>
-            
+          </form>
+          </div>
+            </>
             )
         }
     

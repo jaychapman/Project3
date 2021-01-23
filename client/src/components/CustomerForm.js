@@ -74,16 +74,20 @@ class CustomerForm extends Component{
             console.log(this.props);
            
             return(
+
+              <div className="providerForm">
+              <div id="providerHeading" className="u-full-width test">
+                <h5>Find Home Health Providers</h5>
+                <p>Fill out the form below to get a list of pre-screened home health providers that service your area</p>
+              </div>
                 
             <form onSubmit={this.submit} className="customerForm">
 
-              <div className="test">
-                 <h2>Just a few questions...</h2>
-              </div>
     
               <div className="test" id="nameDiv">
                 <label htmlFor="name">Name</label>
                 <input
+                  className="u-full-width"
                   name="name"
                   value={this.state.name}
                   onChange={this.handleChange}
@@ -96,6 +100,7 @@ class CustomerForm extends Component{
               <div className="test" id="emailDiv">
                 <label htmlFor="email">Email</label>
                 <input
+                  className="u-full-width"
                   name="email"
                   value={this.state.email}
                   onChange={this.handleChange}
@@ -108,18 +113,21 @@ class CustomerForm extends Component{
               <div className="test" id="phoneDiv">
                 <label htmlFor="phone">Phone</label>
                 <input
+                  className="u-full-width"
                   name="phone"
                   value={this.state.phone}
                   onChange={this.handleChange}
-                  placeholder="Phone"
+                  placeholder="format: 123-456-7890"
                   id="phone"
-                  type="text"
+                  type="tel"
+                  pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
                 />
               </div>
 
               <div className="test" id="zipDiv">
                 <label htmlFor="zip">Zip Code</label>
                 <input
+                  className="u-full-width"
                   name="zip"
                   value={this.state.zip}
                   onChange={this.handleChange}
@@ -132,6 +140,7 @@ class CustomerForm extends Component{
               <div className="test" id="whoDiv">
                   <label htmlFor="who">Who needs home care?</label>
                 <select
+                  className="u-full-width"
                   name="whoNeeds"
                   value={this.state.whoNeeds}
                   onChange={this.handleChange}
@@ -147,6 +156,7 @@ class CustomerForm extends Component{
               <div className="test" id="whenDiv">
                 <label htmlFor="when">How soon do you need home care?</label>
                 <select
+                  className="u-full-width"
                   name="howSoon"
                   value={this.state.howSoon}
                   onChange={this.handleChange}
@@ -165,7 +175,7 @@ class CustomerForm extends Component{
               </div>
 
             </form>
-            
+            </div>
             )
         }
     

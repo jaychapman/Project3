@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import ProviderForm from '../components/ProviderForm';
 import Nav from '../components/Nav';
 
 
-class Join extends Component {
+class AboutUs extends Component {
     render(){
         return(
             <>
            <Nav />
-            <div className="container">
-            <ProviderForm />
+           <div className="container">
+            <h1>About Us</h1>
             </div>
             </>
-            
         )
+        
     }
 }
 
-export default Join;
+export default AboutUs;

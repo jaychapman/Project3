@@ -11,6 +11,12 @@ import Admin from './pages/Admin';
 import Results from './pages/Results';
 import Review from './pages/Review';
 import Chat from './components/Chat';
+import AboutUs from './pages/AboutUs';
+import Contact from './pages/Contact';
+import ProverThankYou from "./pages/ProviderThankYou";
+import Reviews from "./pages/Reviews";
+import ZipCodeDistance from './components/zipcodes/ZipCodeDistance';
+import zipCodeRadius from "./components/zipcodes/ZipCodeRadius";
 
 
 
@@ -19,34 +25,26 @@ function App() {
   return (
     <div className="App">
     <Router>
-   
-      
         <Route exact path="/" component={Landing} />
         
-        
-        
-    
-       
-        <Switch>
-        
-      <Route path="/provider" component={Provider} />
-      <Route path="/customer" component={Customer} />
-      <Route path="/join" component={Join} />
-      <Route path="/admin" component={Admin} />
-      <Route path="/results" component={Results} />
-      <Route path="/review" component={Review} />
-    
-      
-      
-      </Switch>
-      
-    </Router>
-
-    <Chat />
-    
-    </div>
-
-    
+          <Switch>    
+          
+            <Route path="/provider" component={Provider} />
+            <Route path="/customer" component={Customer} />
+            <Route path="/join" component={Join} />
+            <Route path="/admin" component={Admin} />
+            <Route path="/results" component={Results} />
+            <Route path="/review" component={Review} />
+            <Route path="/about" component={AboutUs} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/success" component={ProverThankYou} />
+            <Route path="/reviews" component={Reviews} />
+            <Route path="/zipdist" component={ZipCodeDistance} />
+            <Route path="/ziprad" component={zipCodeRadius} />
+          </Switch>
+        </Router>
+      <Chat /> 
+    </div>   
   );
 }
 

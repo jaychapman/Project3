@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Nav from '../components/Nav';
 import axios from 'axios';
 
 class Results extends Component {
@@ -25,35 +24,46 @@ class Results extends Component {
         })
     }
 
+    
+
     displayProviders = (providers) => {
 
-        if(!providers.length) return null;
+        
 
-        return providers.map((provider, index) => {
+        return providers.map((provider, _id) => {
 
+
+  
             // TODO - turn the providers into cards - improve styling and add star rating
-            return <div key={index}>
-                    <h5>{provider.companyName}</h5>
-                    <h6>{provider.phone}</h6>
-                    <h6>{provider.email}</h6>
-                    
-                    <hr/>
-                </div>
+            return <tr key={provider._id}>
+                    <th>{provider.companyName}</th>
+                    <th>{provider.firstName}  {provider.lastName}</th>
+                    <th>{provider.phone}</th>
+                    <th>{provider.backgroundCheck}</th>
+                    <th>X</th>
+                </tr>
         });
+    
     };
 
 
     render(){
         return(
             <>
-            <Nav />
-            <div className="container">
-                <h4>Here are your results</h4>
-                <p>These companies have been screened and provide home care services in your area</p>
-                <div className="provResults">
+            <table className="u-full-width">
+                <thead>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Contact</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody className="adminResults">
                     {this.displayProviders(this.state.providers)}
-                </div>
-            </div>
+                </tbody>
+            </table>
             </>
         )
     }

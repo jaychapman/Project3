@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import CustomerForm from '../components/CustomerForm';
+import Nav from '../components/Nav';
+
 
 
 
@@ -12,8 +14,10 @@ class Customer extends Component {
         
         return(
             <>
-            <h1>Customer Page</h1>
+                <Nav />
+                <div className="container">
                 <CustomerForm />
+                </div>
             </>
         )
     }

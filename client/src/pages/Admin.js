@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
+import Nav from '../components/Nav';
+import AdminResults from '../components/AdminResults';
 
 class Admin extends Component {
     render(){
         return(
             <> 
-                <h1>Admin Page</h1>
+            <Nav />
+            <div className="container">
+               <h4>Administrator Page</h4>
+               <br/>
+               <AdminResults />
+            </div>
             </>
         )
     }
