@@ -48,7 +48,7 @@ class CustomerForm extends Component{
                 let zip = this.state.zip;
                 console.log(zip);
                 this.resetCustomerInputs();
-                this.props.history.push('/results');
+                this.props.history.push('/customerresults');
             })
             .catch(() => {
                 console.log('error');
@@ -154,7 +154,7 @@ class CustomerForm extends Component{
               </div>
 
               <div className="test" id="whenDiv">
-                <label htmlFor="when">How soon do you need home care?</label>
+                <label htmlFor="when">How soon?</label>
                 <select
                   className="u-full-width"
                   name="howSoon"

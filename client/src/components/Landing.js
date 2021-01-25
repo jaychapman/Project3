@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Home from '../pages/Home';
+import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 
@@ -42,12 +43,13 @@ class Landing extends Component {
                             <div id="tagline"><h3>We help you find the best homecare workers to help care for your loved ones</h3></div>
                         </div>
                         <div>
-                            <button id="ctaBtn">Learn More...</button>
+                            <Link to="/customer"><button id="ctaBtn">Learn More...</button></Link>
                         </div>
                     </div>               
                 </div>
                                 <div className="container">
                                 <Home />
+                                <Footer />
                                 
                             
                             </div>

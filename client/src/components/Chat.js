@@ -8,7 +8,7 @@ const id = Math.random();
 class Chat extends Component {
 
     componentDidMount() {
-        addResponseMessage("Welcome to Age in Place Experts. How can I help you today?");
+        addResponseMessage("Welcome to Age Safe at Home. How can I help you today?");
     }
 
     handleNewUserMessage(message) {

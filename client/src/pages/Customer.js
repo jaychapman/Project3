@@ -16,7 +16,7 @@ class Customer extends Component {
             <>
                 <Nav />
                 <div className="container">
-                <CustomerForm />
+                <CustomerForm  />
                 </div>
             </>
         )

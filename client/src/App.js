@@ -17,19 +17,21 @@ import ProverThankYou from "./pages/ProviderThankYou";
 import Reviews from "./pages/Reviews";
 import ZipCodeDistance from './components/zipcodes/ZipCodeDistance';
 import zipCodeRadius from "./components/zipcodes/ZipCodeRadius";
+import CustomerSearchResults from "./components/CustomerSearchResults";
+import UpdateProvider from './pages/UpdateProvider';
+import ProviderSuccess from "./pages/ProviderSuccess";
+
 
 
 
 
 function App() {
   return (
-    <div className="App">
     <Router>
-        <Route exact path="/" component={Landing} />
-        
+    <div className="App"> 
+        <Route exact path="/" component={Landing} />     
           <Switch>    
-          
-            <Route path="/provider" component={Provider} />
+            <Route exact path="/provider" component={Provider} />
             <Route path="/customer" component={Customer} />
             <Route path="/join" component={Join} />
             <Route path="/admin" component={Admin} />
@@ -41,10 +43,14 @@ function App() {
             <Route path="/reviews" component={Reviews} />
             <Route path="/zipdist" component={ZipCodeDistance} />
             <Route path="/ziprad" component={zipCodeRadius} />
-          </Switch>
-        </Router>
+            <Route exact path="/customerresults" component={CustomerSearchResults} />
+            <Route path="/update/:providerId" component={UpdateProvider} />
+            <Route path= "/providersuccess" component={ProviderSuccess} />
+          </Switch>    
       <Chat /> 
+      
     </div>   
+    </Router>
   );
 }
 

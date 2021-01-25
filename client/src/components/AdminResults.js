@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class Results extends Component {
 
@@ -24,6 +25,7 @@ class Results extends Component {
         })
     }
 
+
     
 
     displayProviders = (providers) => {
@@ -40,7 +42,7 @@ class Results extends Component {
                     <th>{provider.firstName}  {provider.lastName}</th>
                     <th>{provider.phone}</th>
                     <th>{provider.backgroundCheck}</th>
-                    <th>X</th>
+                    <th><Link to={`/update/${provider._id}`}><button>update</button></Link></th>
                 </tr>
         });
     
@@ -57,7 +59,7 @@ class Results extends Component {
                         <th>Contact</th>
                         <th>Phone</th>
                         <th>Status</th>
-                        <th>Delete</th>
+                        <th>Update</th>
                     </tr>
                 </thead>
                 <tbody className="adminResults">

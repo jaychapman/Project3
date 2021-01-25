@@ -53,11 +53,6 @@ body {
   margin-top: 3rem;
 }
 
-#home,
-#about,
-#contact {
-  border-right: 1px solid white;
-}
 #menuContainer {
   color: white;
   padding-top: 2rem;
@@ -84,17 +79,25 @@ h3 {
 }
 
 #ctaBtn {
+  display: none;
+}
+
+#menu {
+  font-size: 1.75rem;
+}
+
+/* #ctaBtn {
   size: 3rem;
   background-color: #87a96b;
   color: white;
   border: 1px solid white;
-}
+} */
 
-#ctaBtn:hover {
+/* #ctaBtn:hover {
   background-color: white;
   color: cadetblue;
   border: 1px solid white;
-}
+} */
 
 #home p {
   text-align: justify;
@@ -131,6 +134,35 @@ a:hover {
     background-position: bottom left;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  #menu {
+    font-size: inherit;
+  }
+
+  .contactContainer {
+    max-width: 70%;
+    text-align: left;
+  }
+
+  #ctaBtn {
+    display: inline-block;
+    size: 3rem;
+    background-color: #87a96b;
+    color: white;
+    border: 1px solid white;
+  }
+
+  #ctaBtn:hover {
+    background-color: white;
+    color: cadetblue;
+    border: 1px solid white;
+  }
+
+  #home,
+  #about,
+  #contact {
+    border-right: 1px solid white;
   }
 
   .providerForm {

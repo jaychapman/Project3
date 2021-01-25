@@ -20,11 +20,13 @@ class zipCodeRadius extends Component {
 
     getDistance = () => {
 
+        const API_KEY = process.env.REACT_APP_API_KEY;
+
         const customerZip = '06074';
         const distance = '20';
         // const providerZip = '06053';
 
-        axios.get(`https://api.zip-codes.com/ZipCodesAPI.svc/1.0/FindZipCodesInRadius?zipcode=${customerZip}&minimumradius=0&maximumradius=${distance}&country=ALL&key=${process.env.API_KEY}`)
+        axios.get(`https://api.zip-codes.com/ZipCodesAPI.svc/1.0/FindZipCodesInRadius?zipcode=${customerZip}&minimumradius=0&maximumradius=${distance}&country=ALL&key=${API_KEY}`)
         .then((response) => {
             
             // All Data Returned saved into locations

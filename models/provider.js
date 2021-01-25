@@ -11,6 +11,7 @@ const providerSchema = new Schema({
     radius: { type: String, required: true },
     insured: { type: String },
     backgroundCheck: { type: String },
+    zipCodes: [ String ],
     date: { type: Date, default: Date.now  }
 });
 

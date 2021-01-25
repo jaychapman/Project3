@@ -41,7 +41,8 @@ class ProviderForm extends Component{
                 zip: this.state.zip,
                 radius: this.state.radius,
                 insured: this.state.insured,
-                backgroundCheck: "pending"
+                backgroundCheck: "pending",
+                zipCodes: ['00000']
             };
 
             axios({
